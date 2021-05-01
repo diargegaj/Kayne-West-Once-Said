@@ -8,7 +8,7 @@ import retrofit2.http.GET
  */
 interface KayneRestAPIService {
 
-    @GET("a")
+    @GET("getData")
     fun getKayneWestQuestion(): Call<QuoteModel>
 
     companion object {

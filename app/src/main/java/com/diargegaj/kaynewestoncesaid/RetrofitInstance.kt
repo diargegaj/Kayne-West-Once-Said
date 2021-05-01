@@ -6,7 +6,7 @@ import retrofit2.converter.gson.GsonConverterFactory
 /**
  * Created by Diar Gegaj on 21-05-01.
  */
-object RetrofitConstant {
+object RetrofitInstance {
     val retrofit = Retrofit.Builder()
         .baseUrl(KayneRestAPIService.KAYNE_REST_API_URL)
         .addConverterFactory(GsonConverterFactory.create())
