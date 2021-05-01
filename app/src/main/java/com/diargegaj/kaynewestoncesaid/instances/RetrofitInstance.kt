@@ -1,5 +1,6 @@
-package com.diargegaj.kaynewestoncesaid
+package com.diargegaj.kaynewestoncesaid.instances
 
+import com.diargegaj.kaynewestoncesaid.services.KayneRestAPIService
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 

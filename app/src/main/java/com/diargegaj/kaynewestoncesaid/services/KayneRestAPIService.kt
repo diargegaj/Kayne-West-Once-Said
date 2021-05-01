@@ -1,5 +1,6 @@
-package com.diargegaj.kaynewestoncesaid
+package com.diargegaj.kaynewestoncesaid.services
 
+import com.diargegaj.kaynewestoncesaid.models.QuoteModel
 import retrofit2.Call
 import retrofit2.http.GET
 

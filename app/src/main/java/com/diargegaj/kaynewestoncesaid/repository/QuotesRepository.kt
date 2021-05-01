@@ -2,8 +2,8 @@ package com.diargegaj.kaynewestoncesaid.repository
 
 import android.util.Log
 import androidx.lifecycle.MutableLiveData
-import com.diargegaj.kaynewestoncesaid.QuoteModel
-import com.diargegaj.kaynewestoncesaid.RetrofitInstance
+import com.diargegaj.kaynewestoncesaid.models.QuoteModel
+import com.diargegaj.kaynewestoncesaid.instances.RetrofitInstance
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -13,6 +13,7 @@ import retrofit2.Response
  */
 class QuotesRepository {
     private var quoteModel: MutableLiveData<QuoteModel>? = null
+    private val TAG = "QuotesRepository"
 
     fun getQuote(): MutableLiveData<QuoteModel>? {
         if (quoteModel == null) {
@@ -27,11 +28,11 @@ class QuotesRepository {
         RetrofitInstance.service.getKayneWestQuestion().enqueue(object : Callback<QuoteModel> {
             override fun onResponse(call: Call<QuoteModel>, response: Response<QuoteModel>) {
                 quoteModel?.value = response.body()
-                Log.d("diari1", "response: ${response.body()?.quote}")
+                Log.d(TAG, "response: ${response.body()?.quote}")
             }
 
             override fun onFailure(call: Call<QuoteModel>, t: Throwable) {
-                Log.d("diari1", "failed = ${t.message}", t)
+                Log.d(TAG, "failed to get data from API = ${t.message}", t)
             }
         })
     }

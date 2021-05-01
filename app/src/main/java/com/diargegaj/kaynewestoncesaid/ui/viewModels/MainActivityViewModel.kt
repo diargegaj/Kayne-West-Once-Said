@@ -1,9 +1,8 @@
 package com.diargegaj.kaynewestoncesaid.ui.viewModels
 
-import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import com.diargegaj.kaynewestoncesaid.QuoteModel
+import com.diargegaj.kaynewestoncesaid.models.QuoteModel
 import com.diargegaj.kaynewestoncesaid.repository.QuotesRepository
 
 /**
