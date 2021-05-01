@@ -15,7 +15,7 @@ class MainActivity : AppCompatActivity() {
 
         RetrofitConstant.service.getKayneWestQuestion().enqueue(object : Callback<QuoteModel> {
             override fun onResponse(call: Call<QuoteModel>, response: Response<QuoteModel>) {
-                test.text = response.body()?.quote
+                quoteTextView.text = response.body()?.quote
                 Log.d("diari1", "response: ${response.body()?.quote}")
             }
 

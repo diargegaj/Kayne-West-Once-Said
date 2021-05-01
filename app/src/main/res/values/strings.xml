@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Kayne West Once Said</string>
+    <string name="kayne_west_once_said">Kayne West Once Said:</string>
+    <string name="refresh">Refresh</string>
 </resources>
